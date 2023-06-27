@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "guiathayde-dev"
+  },
+  "targets": {
+    "guiathayde-dev": {
+      "hosting": {
+        "guiathayde-video": [
+          "guiathayde-video"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
