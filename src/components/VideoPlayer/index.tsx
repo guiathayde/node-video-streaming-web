@@ -23,7 +23,7 @@ export function VideoPlayer({ videoId }: VideoPlayerProps) {
       autoPlay
     >
       <source
-        src={`${import.meta.env.VITE_API_URL}/${videoId}`}
+        src={`${import.meta.env.VITE_API_URL}/${videoId}.mp4`}
         type="video/mp4"
       ></source>
       Your browser does not support the video tag.

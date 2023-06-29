@@ -7,6 +7,8 @@ export const Container = styled.div`
   justify-content: center;
   gap: 1rem;
 
+  margin: 0 auto;
+
   max-width: 90%;
   height: 90vh;
 
@@ -14,5 +16,11 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
   padding: 0.125rem 1rem;
 `;

@@ -24,7 +24,12 @@ export function Home() {
   useEffect(() => {
     api
       .get('/')
-      .then((response) => setVideos(response.data))
+      .then((response) => {
+        const videosNames = response.data.map((videoName: string) =>
+          videoName.replace('.mp4', '')
+        );
+        setVideos(videosNames);
+      })
       .catch((error) => console.error(JSON.stringify(error, null, 2)));
   }, []);
 
@@ -34,6 +39,10 @@ export function Home() {
         videos.map((videoId) => (
           <Button key={videoId} onClick={(e) => loadVideo(e, videoId)}>
             {videoId}
+            <img
+              src={`${import.meta.env.VITE_API_URL}/thumbs/${videoId}.png`}
+              alt=""
+            />
           </Button>
         ))}
     </Container>
